@@ -1,0 +1,99 @@
+// Function to ask the first question  
+function questionOne() {
+    let answer = readLine("#1: Which country hosted the 1982 FIFA World Cup?");
+    if (answer == "spain") {
+        console.log("Correct!");
+    } else {
+        console.log("Wrong! The answer is Spain.");
+    }
+    console.log("******************");
+}
+
+// Function to ask the second question  
+function questionTwo() {
+    let answer = readLine("#2: What is the largest North American country by land area?");
+    if (answer == "canada") {
+        console.log("Correct!");
+    } else {
+        console.log("Wrong! The answer is Canada.");
+    }
+    console.log("******************");
+}
+
+// Function to ask the third question  
+function questionThree() {
+    let answer = readLine("#3: Doraphobia is the fear of what?");
+    if (answer == "fur") {
+        console.log("Correct!");
+    } else {
+        console.log("Wrong! The answer is fur.");
+    }
+    console.log("******************");
+}
+
+// Function to ask the fourth question  
+function questionFour() {
+    let answer = readLine("#4: What is the capital of Australia?");
+    if (answer == "canberra") {
+        console.log("Correct!");
+    } else {
+        console.log("Wrong! The answer is Canberra.");
+    }
+    console.log("******************");
+}
+
+// Function to ask the fifth question  
+function questionFive() {
+    let answer = readLine("#5: What is the smallest planet in our solar system?");
+    if (answer == "mercury") {
+        console.log("Correct!");
+    } else {
+        console.log("Wrong! The answer is Mercury.");
+    }
+    console.log("******************");
+}
+
+// Function to ask the sixth question  
+function questionSix() {
+    let answer = readLine("#6: In what year did the Titanic sink?");
+    if (answer == "1912") {
+        console.log("Correct!");
+    } else {
+        console.log("Wrong! The answer is 1912.");
+    }
+    console.log("******************");
+}
+
+// Main function to run the trivia game  
+function runTriviaGame() {
+    questionOne();
+    questionTwo();
+    questionThree();
+
+    // Always ask at least three questions, and then ask if they want to continue  
+    let continueGame = true;
+    let questionCount = 3;
+
+    while (continueGame && questionCount < 6) {
+        if (questionCount === 3) {
+            questionFour();
+        } else if (questionCount === 4) {
+            questionFive();
+        } else if (questionCount === 5) {
+            questionSix();
+        }
+        
+        questionCount++; // Increment the question count
+
+        // Ask if they want to continue after each additional question  
+        if (questionCount < 6) {
+            let answer = prompt("Do you want to continue to the next question? (yes/no)");
+            continueGame = answer== "yes";
+        }
+    }
+
+    console.log("Thanks for playing!");
+}
+
+// Call the main function to start the game  
+runTriviaGame();
