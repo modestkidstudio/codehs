@@ -1,0 +1,126 @@
+// Global Destination Assistant
+
+// Function to ask about climate preference
+function chooseClimate() {
+  let climate = readInt("Would you prefer visiting a (1) hot or (2) cold climate? ");
+  return climate;
+}
+
+// Function to ask about duration of stay
+function chooseStayDuration() {
+  let days = readInt("Do you plan to stay (3) days, (7) days, or (0) longer than a week? ");
+  return days;
+}
+
+// Function to determine the travel destination based on preferences
+function chooseDestination(climate, days) {
+  let destination;
+  
+  // Based on climate preference
+  if (climate === 1) {  // Hot Climate
+    if (days === 3) {
+      destination = "Thailand"; // Example hot climate country
+    } else if (days === 7) {
+      destination = "Mexico";  // Another option for a week-long stay
+    } else {
+      destination = "Egypt";  // Hot and long stay
+    }
+  } else if (climate === 2) {  // Cold Climate
+    if (days === 3) {
+      destination = "Iceland"; // Example cold climate country
+    } else if (days === 7) {
+      destination = "Canada";  // Another option for a week-long stay
+    } else {
+      destination = "Norway";  // Cold and long stay
+    }
+  }
+  
+  return destination;
+}
+
+// Function to provide currency information about the chosen destination
+function reportCurrency(destination) {
+  let currency;
+  
+  if (destination === "Thailand") {
+    currency = "Thai baht";
+  } else if (destination === "Mexico") {
+    currency = "Mexican peso";
+  } else if (destination === "Egypt") {
+    currency = "Egyptian pound";
+  } else if (destination === "Iceland") {
+    currency = "Icelandic króna";
+  } else if (destination === "Canada") {
+    currency = "Canadian dollar";
+  } else if (destination === "Norway") {
+    currency = "Norwegian krone";
+  }
+
+  return currency;
+}
+
+// Function to provide official language information about the chosen destination
+function reportLanguage(destination) {
+  let language;
+  
+  if (destination === "Thailand") {
+    language = "Thai or Central Thai";
+  } else if (destination === "Mexico") {
+    language = "Spanish";
+  } else if (destination === "Egypt") {
+    language = "Arabic";
+  } else if (destination === "Iceland") {
+    language = "Icelandic";
+  } else if (destination === "Canada") {
+    language = "English and French";
+  } else if (destination === "Norway") {
+    language = "Norwegian";
+  }
+
+  return language;
+}
+
+// Function to provide a weather description for the chosen destination
+function reportWeather(destination) {
+  let weather;
+  
+  if (destination === "Thailand") {
+    weather = "Hot and humid with monsoon season from May to October.";
+  } else if (destination === "Mexico") {
+    weather = "Warm with a tropical climate in coastal areas and temperate weather in highlands.";
+  } else if (destination === "Egypt") {
+    weather = "Hot desert climate with little rainfall.";
+  } else if (destination === "Iceland") {
+    weather = "Cold and snowy with long winters and mild summers.";
+  } else if (destination === "Canada") {
+    weather = "Cold winters with snow and mild summers.";
+  } else if (destination === "Norway") {
+    weather = "Cold winters with snow, summers are mild with longer daylight hours.";
+  }
+
+  return weather;
+}
+
+// Main function that orchestrates the user input and provides recommendations
+function globalTravelAssistant() {
+  console.log("Global Destination Assistant");
+  console.log("============================");
+  
+  let climate = chooseClimate();
+  let days = chooseStayDuration();
+  let destination = chooseDestination(climate, days);
+  
+  console.log(`I recommend traveling to ${destination}.`);
+  
+  let currency = reportCurrency(destination);
+  let language = reportLanguage(destination);
+  let weather = reportWeather(destination);
+  
+  console.log("\nHere's some additional information about " + destination + ":");
+  console.log("Currency: " + currency);
+  console.log("Official Language: " + language);
+  console.log("Weather: " + weather);
+}
+
+// Run the program
+globalTravelAssistant();
