@@ -1,0 +1,31 @@
+function main() {
+  let isHappy = true;
+  let isSad = false;
+  let isMad = false;
+
+  if (isHappy) {
+    playHappySong();
+  } else if (isSad) {
+    playSadSong();
+  } else if (isMad) {
+    playMadSong();
+  }
+}
+
+function playHappySong() {
+  console.log("It might seem crazy what I'm about to say\nSunshine she's here, you can take a break\nI'm a hot air balloon that could go to space\nWith the air, like I don't care baby by the way\nBecause I'm happy\nClap along if you feel like a room without a roof\nBecause I'm happy\nClap along if you feel like happiness is the truth\nBecause I'm happy\nClap along if you know what happiness is to you\nBecause I'm happy\nClap along if you feel like that's what you wanna do\
+nHere come bad news talking this and that\nYeah, well, gimme all you got and don't hold back\nYeah, well I should probably warn you I'll be just fine\nYeah, no offense to you don't waste your time\nHere's why\nBecause I'm happy\nClap along if you feel like a room without a roof\nBecause I'm happy\nClap along if you feel like happiness is the truth\nBecause I'm happy\nClap along if you know what happiness is to you\nBecause I'm happy\nClap along if you feel like that's what you wanna do\nbring   me down\nCan't nothing (happy) bring me down\nMy level's too high (happy) to bring me down\nCan't nothing (happy) bring me down\nI said\n(Happy, happy, happy) bring me down\nCan't nothing bring me down\nMy level's too high (happy) to bring me down\nCan't nothing bring me down\nI said\nBecause   I'm happy\nClap along if you feel like a room without a roof\nBecause I'm happy\nClap along if you feel like happiness is the truth\nBecause   I'm happy\nClap along if you know what happiness is to you\nBecause I'm happy\nClap along if you feel like that's what you wanna do\nBecause   I'm happy\nClap along if you feel like a room without a roof\nBecause I'm happy\nClap along if you feel like happiness is the truth\nBecause   I'm happy\nClap along if you know what happiness is to you\nBecause I'm happy\nClap along if you feel like that's what you wanna do\nbring   me down\nCan't nothing (happy) bring me down\nMy level's too high (happy) to bring me down\nCan't nothing (happy) bring me down\nI said\nBecause   I'm happy\nClap along if you feel like a room without a roof\nBecause I'm happy\nClap along if you feel like happiness is the truth\nBecause   I'm happy\nClap along if you know what happiness is to you\nBecause I'm happy\nClap along if you feel like that's what you wanna do\nBecause   I'm happy\nClap along if you feel like a room without a roof\nBecause I'm happy\nClap along if you feel like happiness is the truth\nBecause   I'm happy\nClap along if you know what happiness is to you\nBecause I'm happy\nClap along if you feel like that's what you wanna do");   
+
+}
+
+function playSadSong() {
+  // Replace with lyrics for a sad song
+  console.log("Feeling blue, down in the dumps\nEverything seems to be in a clump\nRain is pouring, sky is gray\nCan't shake this feeling, come what may");
+}
+
+function playMadSong() {
+  // Replace with lyrics for a mad song
+  console.log("I'm angry, I'm frustrated\nFeeling irritated, aggravated\nWant to scream, want to shout\nCan't calm down, can't shut up");
+}
+
+main();
