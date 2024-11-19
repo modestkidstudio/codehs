@@ -1,0 +1,64 @@
+const PAN_RADIUS = getWidth()/3;
+const HANDLE_WIDTH = getWidth()/2;
+const HANDLE_HEIGHT = HANDLE_WIDTH/4;
+const PAN_COLOR = Color.GRAY;
+
+const PAN_BOTTOM_RADIUS = PAN_RADIUS-20;
+const PAN_BOTTOM_COLOR = Color.BLACK;
+
+const EGG_RADIUS = PAN_BOTTOM_RADIUS/4;
+const EGG_WHITE_COLOR = Color.WHITE;
+const EGG_YOLK_COLOR = Color.YELLOW;
+
+const HIGHLIGHT_RADIUS = EGG_RADIUS/4;
+const HIGHLIGHT_COLOR = Color.WHITE;
+
+//start function
+function start() {
+let circleD = new Circle(getWidth()/3);
+circleD.setColor(Color.GRAY);
+circleD.setPosition(200,250);
+add(circleD);
+let centerX = getWidth()/2 ;
+let centurY = getHeight()/2 ;
+let rect = new Rectangle(getWidth()/2, HANDLE_WIDTH/4) ;
+rect.setColor(Color.GRAY);
+rect.setPosition(200,220);
+add(rect);
+let circleF = new Circle(PAN_RADIUS-20);
+circleF.setColor(Color.BLACK);
+circleF.setPosition(200,250);
+add(circleF);
+let circleG = new Circle(PAN_BOTTOM_RADIUS/4);
+circleG.setColor(Color.WHITE);
+circleG.setPosition(150,250);
+add(circleG);
+let circleH = new Circle(PAN_BOTTOM_RADIUS/4);
+circleH.setColor(Color.WHITE);
+circleH.setPosition(180,280);
+add(circleH);
+let circleJ = new Circle(PAN_BOTTOM_RADIUS/4);
+circleJ.setColor(Color.WHITE);
+circleJ.setPosition(220,260);
+add(circleJ);
+let circleK = new Circle(PAN_BOTTOM_RADIUS/4);
+circleK.setColor(Color.WHITE);
+circleK.setPosition(180,220);
+add(circleK);
+let circleL = new Circle(PAN_BOTTOM_RADIUS/4);
+circleL.setColor(Color.WHITE);
+circleL.setPosition(220,220);
+add(circleL);
+let circleZ = new Circle(PAN_BOTTOM_RADIUS/4);
+circleZ.setColor(Color.WHITE);
+circleZ.setPosition(190,250);
+add(circleZ);
+let circleC = new Circle(PAN_BOTTOM_RADIUS/4);
+circleC.setColor(Color.YELLOW);
+circleC.setPosition(190,250);
+add(circleC);
+let circleV = new Circle(EGG_RADIUS/4);
+circleV.setColor(Color.WHITE);
+circleV.setPosition(200,240);
+add(circleV);
+}
