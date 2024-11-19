@@ -1,0 +1,86 @@
+// Const variables for main ghost body
+const HEAD_RADIUS = 70;
+const BODY_WIDTH = HEAD_RADIUS * 2;
+const BODY_HEIGHT = 120;
+const NUM_FEET = 3;
+const FOOT_RADIUS = (BODY_WIDTH) / (NUM_FEET * 2);
+const BODY_COLOR = "red";
+
+// Const variables for eyes
+const PUPIL_RADIUS = 8;
+const PUPIL_LEFT_OFFSET = 16;
+const PUPIL_RIGHT_OFFSET = 40;
+const EYE_RADIUS = 20;
+const EYE_OFFSET = 28;
+const EYE_COLOR = "white";
+const PUPIL_COLOR = "blue";
+
+/* This program draws a ghost on the canvas. */
+function main() {
+    Head();
+    Foot();
+    Body();
+    drawGhostEyes();
+    pupils();
+}
+
+function Head() {
+    let circle = new Circle(HEAD_RADIUS);
+    circle.setPosition(200, 143);
+    circle.setColor(BODY_COLOR);
+    add(circle);
+}
+
+function Body() {
+    let rect = new Rectangle(BODY_WIDTH, BODY_HEIGHT);
+    rect.setPosition(130, 150);
+    rect.setColor(BODY_COLOR);
+    add(rect);
+}
+
+function Foot() {
+    let circle = new Circle(FOOT_RADIUS);
+    circle.setPosition(6.56 * FOOT_RADIUS, 270);
+    circle.setColor(BODY_COLOR);
+    add(circle);
+    let circle1 = new Circle(FOOT_RADIUS);
+    circle1.setPosition(10.56 * FOOT_RADIUS, 270);
+    circle1.setColor(BODY_COLOR);
+    add(circle1);
+    let circle2 = new Circle(FOOT_RADIUS);
+    circle2.setPosition(8.56 * FOOT_RADIUS, 270);
+    circle2.setColor(BODY_COLOR);
+    add(circle2);
+}
+
+function drawGhostEyes() {
+    const righteyeposx = 230;
+    const righteyeposy = 143;
+    let righteye = new Circle(EYE_RADIUS);
+    righteye.setColor(EYE_COLOR);
+    righteye.setPosition(righteyeposx, righteyeposy);
+    add(righteye);
+    const lefteyeposx = righteyeposx - EYE_OFFSET - 30;
+    let lefteye = new Circle(EYE_RADIUS);
+    lefteye.setColor(EYE_COLOR);
+    lefteye.setPosition(lefteyeposx, righteyeposy);
+    add(lefteye);
+}
+
+function pupils() {
+    const righteyeposx = 230;
+    const righteyeposy = 143;
+    const righteyepupilx = righteyeposx + PUPIL_RIGHT_OFFSET - 28;
+    let righteyepupil = new Circle(PUPIL_RADIUS);
+    righteyepupil.setPosition(righteyepupilx, righteyeposy);
+    righteyepupil.setColor(PUPIL_COLOR);
+    add(righteyepupil);
+    const lefteyeposx = righteyeposx - EYE_OFFSET - 30;
+    const lefteyepupilx = lefteyeposx + PUPIL_LEFT_OFFSET - 4;
+    let lefteyepupil = new Circle(PUPIL_RADIUS);
+    lefteyepupil.setPosition(lefteyepupilx, righteyeposy);
+    lefteyepupil.setColor(PUPIL_COLOR);
+    add(lefteyepupil);
+}
+
+main();
