@@ -1,0 +1,40 @@
+// vars
+const screenwigth = getWidth();
+
+// scripts
+function main() {
+    drawScreen();
+    Img();
+    drawdesk();
+}
+
+function drawdesk() {
+    let rect = new Rectangle(screenwigth, 150);
+    rect.setColor("#8B4513");
+    rect.setPosition(0, 350);
+    add(rect);
+}
+
+function Img() {
+    let copter = new WebImage("https://codehs.com/uploads/65e2b6cf6af8f55b1923e1c79c746c44");
+    copter.setSize(80, 100);
+    copter.setPosition(132, 235);
+    add(copter);
+}
+
+function drawScreen() {
+    let montior1 = new Circle(30);
+    montior1.setColor("#AEAEAE");
+    montior1.setPosition(200,370);
+    add(montior1);
+    let montior2 = new Rectangle(150, 100);
+    montior2.setColor("#AEAEAE");
+    montior2.setPosition(125, 230);
+    add(montior2);
+    let screen = new Rectangle(100, 100);
+    screen.setColor("black");
+    screen.setPosition(125, 230);
+    add(screen);
+}
+
+main();
