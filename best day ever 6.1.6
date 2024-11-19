@@ -1,0 +1,56 @@
+function main() {
+    //Write 5 Boolean letiables that describe the conditions for the best day ever!
+    let gotpizza =  true;
+    let isWindy = true;
+    let rainbow = true;
+    let hasgift = true;
+    let israining = true;
+    
+    console.log("they have pizza?" + ": " + gotpizza);
+    console.log("is it windy today?" + ": " + isWindy);
+    console.log("is there a raindow?" + ": " + rainbow);
+    console.log("does he have gifts?" + ": " + hasgift);
+    console.log("is it rainning?" + ": " + israining);
+    console.log();
+    console.log("story:");
+    console.log("one day was a good day for david, why?");
+    
+    if (gotpizza) {
+    console.log("he got pizza and");
+    }
+    if (isWindy) {
+    console.log("it was windy. so they had to go inside");
+    } else {
+        console.log("it was not windy so they can stay outside.");
+    }
+    if (rainbow) {
+    console.log("there was also a rainbow outside");
+    }
+    if (hasgift) {
+    console.log("he also got gifts");
+    } else {
+        console.log("he was sad because he got no gifts");
+    }
+    if (israining) {
+        if (isWindy) {
+            console.log("it started to rain so nothing got all wet");
+        } else {
+            console.log("it started rainning and");
+            if (hasgift) {
+                console.log("his gift got all wet");
+                if (gotpizza) {
+                    console.log("and the pizza got all wet");
+                }
+            } else {
+                console.log("the cake got wet");
+                if (gotpizza) {
+                    console.log("and the pizza got all wet");
+                }
+            }
+        }
+    } else{
+        console.log("it was a clear day too");
+    }
+}
+
+main();
