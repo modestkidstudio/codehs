@@ -1,0 +1,52 @@
+// Randomizer class to simulate Randomizer.nextBoolean()
+const Randomizer = {
+    nextBoolean: function() {
+        return Math.random() < 0.5; // Returns true or false randomly  
+    }
+};
+
+// Function for breakfast decision  
+function breakfastDecision() {
+    let isHungry = Randomizer.nextBoolean(); // Simulate hunger  
+    let wokeUpOnTime = Randomizer.nextBoolean(); // Simulate waking up on time
+
+    if (isHungry && wokeUpOnTime) {
+        console.log("I eat pancakes and syrup.");
+    } else {
+        console.log("I skip breakfast and grab a granola bar.");
+    }
+}
+
+// Function for exercise decision  
+function exerciseDecision() {
+    let isSunny = Randomizer.nextBoolean(); // Simulate sunny weather  
+    let haveTime = Randomizer.nextBoolean(); // Simulate having time
+
+    if (isSunny || haveTime) {
+        console.log("I go for a bike ride.");
+    } else {
+        console.log("I stay indoors and do some stretching.");
+    }
+}
+
+// Function for dinner decision  
+function dinnerDecision() {
+    let haveIngredients = Randomizer.nextBoolean(); // Simulate having ingredients  
+    let feelLikeCooking = Randomizer.nextBoolean(); // Simulate desire to cook
+
+    if (haveIngredients && feelLikeCooking) {
+        console.log("I cook a stir-fry with vegetables.");
+    } else {
+        console.log("I order pizza instead.");
+    }
+}
+
+// Main function to call the decision functions  
+function main() {
+    breakfastDecision();
+    exerciseDecision();
+    dinnerDecision();
+}
+
+// Execute the main function  
+main();
