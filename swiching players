@@ -1,0 +1,27 @@
+function main() {
+    let isPlayOne = Randomizer.nextBoolean();
+   
+    if (isPlayOne) {
+        console.log("It's play 1's turn.");
+       
+    } else {
+        console.log("It's player 2's turn.");
+    }
+
+   
+   if (isPlayOne) {
+        console.log("It's play 1's turn.");
+       
+    } else {
+        console.log("It's player 2's turn.");
+    }
+    if (isPlayOne) {
+        console.log(!"It's play 1's turn.");
+       
+    } else {
+        console.log("It's player 2's turn.");
+    }
+}
+
+
+main();
