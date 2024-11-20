@@ -1,0 +1,7 @@
+function main() {
+let diceOne = readInt("First Dice Roll");
+let diceTwo = readInt("Second Dice Roll");
+let rolledDoubles = diceOne == diceTwo;
+println("Got Doubles " + rolledDoubles);
+}
+main();
