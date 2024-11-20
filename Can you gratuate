@@ -1,0 +1,26 @@
+let creadits = readBoolean("Do you have enough course credits? ");
+let re = readBoolean("Have you met all of your graduation requirements? ");
+let can = readBoolean("Can you graduate? ");
+
+function main() {
+    let canyou = false;
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+	console.log("Do you have enough course credits?" + " : " + creadits);
+	console.log("Have you met all of your graduation requirements?" + " : " + re);
+	console.log("Can you graduate?" + " : " + can);
+	if (creadits) {
+	    if (re) {
+	        canyou = true;
+	    } else {
+	        canyou = false;
+	    }
+	} else {
+	    canyou = false;
+	}
+	console.log("can you tho? : " + canyou);
+}
+
+main();
